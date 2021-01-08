@@ -34,6 +34,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
             console.log('error creating user', err.message)
         }
     }
+    return userRef
+    // SMALL BUG LIKE BEFORE -- CREATED AT IS STAYING THE STATE
 }
 
 export const auth = firebase.auth();
