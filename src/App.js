@@ -3,10 +3,11 @@ import './App.css';
 import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { receiveUser } from './action/user-action'
+import { receiveUser } from './action/user-action';
 import { AuthRoute, ProtectedRoute } from "./util/route-util";
 
-import { auth, createUserProfileDocument } from './firebase/firebase.util'
+import { auth, createUserProfileDocument } from './firebase/firebase.util';
+import Header from './components/header/header';
 import HomePage from './pages/home/home-page';
 
 function App({ setCurrentUser }) {
@@ -36,7 +37,7 @@ function App({ setCurrentUser }) {
 
     return (
         <div>
-          {/* <Header />  */}
+          <Header /> 
           <Switch>
             <Route path= '/signin' component={SignInAndSignUp} />
             <Route path='/' component={HomePage}/>

@@ -10,7 +10,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-    user: userReducer,
+    currentUser: userReducer,
 });
 
 
